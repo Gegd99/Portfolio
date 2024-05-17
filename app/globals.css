@@ -17,13 +17,19 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply flex flex-col h-screen w-[100vh] bg-[black] overflow-hidden m-0 text-center;
+}
+
+.project-cover {
+  @apply w-[36vmin] h-[50vmin] object-cover -translate-x-2/4;
+}
+
+.project-presentation {
+  @apply absolute left-[16.66%] w-2/3;
+}
+
+.image-track {
+  @apply flex gap-[4vmin] absolute left-2/4 top-2/4;
 }
 
 @layer utilities {
